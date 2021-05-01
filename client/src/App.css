@@ -17,7 +17,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color:rgb(76, 78, 83);
   color: #333;
 }
 
@@ -57,7 +57,11 @@ img {
   line-height: 1.2;
   margin-bottom: 1rem;
 }
-
+.med{
+  font-size: 1cm;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -70,9 +74,16 @@ img {
 .text-primary {
   color: var(--primary-color);
 }
+.c{
+  text-align: center;
+  align-self: center;
+}
 
 .text-dark {
   color: var(--dark-color);
+}
+.text-light {
+  color: var(--light-color);
 }
 /*transition*/
 .transition{
@@ -232,7 +243,12 @@ border-radius: 20px;
 }
 /*darkbg*/
 .darkbg{
-  background-color: rgb(56,58,69);
+  background-color: rgb(76, 78, 83);
+
+  align-content: center;
+  text-align: center;
+  padding-top: 2cm;
+
 }
 /* Overlay */
 .dark-overlay {
@@ -246,7 +262,9 @@ border-radius: 20px;
 
 /* Forms */
 .form .form-group {
-  margin: 1.2rem 0;
+  margin: 1rem 0;
+  align-content: center;
+
 }
 
 .form .form-text {
@@ -261,11 +279,13 @@ border-radius: 20px;
 .form input[type='date'],
 .form select,
 .form textarea {
-  display: block;
-  width: 100%;
+  text-align: left;
+hight:5px;
+  width: 10cm;
   padding: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 .form input[type='submit'],
@@ -348,7 +368,7 @@ button {
 }
 
 .landing-inner {
-  color: #fff;
+  color: #ffffff;
   height: 100%;
   width: 80%;
   margin: auto;

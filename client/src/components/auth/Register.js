@@ -35,11 +35,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
     <Fragment >
 <div className="darkbg">
-      <h1 className="large text-primary">Sign Up</h1>
-      <p className="lead">
-        <i className="fas fa-user" /> Create Your Account
-      </p>
-      <form className="form" onSubmit={onSubmit}>
+
+      <h1 className="med text-primary">Sign Up</h1>
+
+      <form className="form text-light" onSubmit={onSubmit}>
         <div className="form-group">
           <input
             type="text"
@@ -49,7 +48,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={onChange}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group light-color" >
           <input
             type="email"
             placeholder="Email Address"
@@ -57,10 +56,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             value={email}
             onChange={onChange}
           />
-          <small className="form-text">
-            This site uses Gravatar so if you want a profile image, use a
-            Gravatar email
-          </small>
+
         </div>
         <div className="form-group">
           <input
@@ -82,7 +78,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         </div>
         <input type="submit" className="btn btn-primary" value="Register" />
       </form>
-      <p className="my-1">
+      <p className="my-1 text-light">
         Already have an account? <Link to="/login">Sign In</Link>
       </p>
  </div>
