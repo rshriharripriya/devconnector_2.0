@@ -13,6 +13,7 @@
   "author": "Brad Traversy",
   "license": "MIT",
   "dependencies": {
+    "@types/react-transition-group": "^4.4.1",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "client": "file:client",

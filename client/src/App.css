@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
+  --primary-color: #8a2be2;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -33,7 +33,6 @@ ul {
 img {
   width: 100%;
 }
-
 /* Utilities */
 .container {
   max-width: 1100px;
@@ -46,9 +45,11 @@ img {
 
 /* Text Styles*/
 .x-large {
-  font-size: 4rem;
-  line-height: 1.2;
+  font-family:"Roboto Black";
+  /*font-size: 640px;*/
+  /*line-height: 1.2;*/
   margin-bottom: 1rem;
+
 }
 
 .large {
@@ -73,7 +74,10 @@ img {
 .text-dark {
   color: var(--dark-color);
 }
-
+/*transition*/
+.transition{
+  transition: all 3s ease-in-out;
+}
 /* Padding */
 .p {
   padding: 0.5rem;
@@ -128,15 +132,18 @@ img {
 
 .btn {
   display: inline-block;
-  background: var(--light-color);
-  color: #333;
+  background: var(--primary-color);
+  color: #333333;
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   margin-right: 0.5rem;
-  transition: opacity 0.2s ease-in;
+  transition: all 3s ease-in-out;
   outline: none;
+border-radius: 20px;
+  min-width: 7cm;
+   margin-bottom: 1rem;
 }
 
 .badge {
@@ -223,10 +230,13 @@ img {
   background: #ccc;
   margin: 1.5rem 0;
 }
-
+/*darkbg*/
+.darkbg{
+  background-color: rgb(56,58,69);
+}
 /* Overlay */
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
   left: 0;
@@ -308,7 +318,7 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px var(--primary-color);
+  /*border-bottom: solid 1px var(--primary-color);*/
   opacity: 0.9;
 }
 
@@ -333,7 +343,7 @@ button {
 /* Landing Page */
 .landing {
   position: relative;
-  background: url('./img/showcase.jpg') no-repeat center center/cover;
+  background: url('./img/bg.jfif') no-repeat center center/cover;
   height: 100vh;
 }
 
