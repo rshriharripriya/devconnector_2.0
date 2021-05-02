@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -25,13 +25,11 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <Fragment>
-      <h1 className="large text-primary">Sign In</h1>
-      <p className="lead">
-        <i className="fas fa-user" /> Sign Into Your Account
-      </p>
-      <form className="form" onSubmit={onSubmit}>
-        <div className="form-group">
+<section className='bgpic'>
+
+      <h1 className="med text-primary">Sign In</h1>
+      <form className="form text-light" onSubmit={onSubmit}>
+        <div className="form-group ">
           <input
             type="email"
             placeholder="Email Address"
@@ -41,7 +39,7 @@ const Login = ({ login, isAuthenticated }) => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="form-group light-color">
           <input
             type="password"
             placeholder="Password"
@@ -53,10 +51,11 @@ const Login = ({ login, isAuthenticated }) => {
         </div>
         <input type="submit" className="btn btn-primary" value="Login" />
       </form>
-      <p className="my-1">
+      <p className="my-1 text-light">
         Don't have an account? <Link to="/register">Sign Up</Link>
       </p>
-    </Fragment>
+
+ </section>
   );
 };
 

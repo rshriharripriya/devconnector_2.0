@@ -1,11 +1,16 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect ,useState} from 'react';
+import { ProSidebar, Menu, MenuItem, SubMenu ,SidebarContent,SidebarHeader,SidebarFooter} from 'react-pro-sidebar';
+import 'react-pro-sidebar/dist/css/styles.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import DashboardActions from './DashboardActions';
+import DashboardSidebar from './DashboardSidebar';
 import Experience from './Experience';
 import Education from './Education';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
+import Profile from "../profile/Profile";
+import sidebarBg from '../../img/img_2.png';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -18,10 +23,13 @@ const Dashboard = ({
   }, [getCurrentProfile]);
 
   return (
-    <Fragment>
-      <h1 className="large text-primary">Dashboard</h1>
-      <p className="lead">
-        <i className="fas fa-user" /> Welcome {user && user.name}
+<Fragment>
+          <section className="align-center fittowidth">
+              <div className="dark-overlay2 center fittowidth">
+
+
+      <p className="med text-light center">
+        <i className="fas fa-user text-light p-1 center" /> Profile
       </p>
       {profile !== null ? (
         <Fragment>
@@ -30,20 +38,23 @@ const Dashboard = ({
           <Education education={profile.education} />
 
           <div className="my-2">
-            <button className="btn btn-danger" onClick={() => deleteAccount()}>
-              <i className="fas fa-user-minus" /> Delete My Account
+            <button className="btn btn-danger"  style={{}} onClick={() => deleteAccount()}>
+              <i className="fas fa-user-minus center" /> Delete My Account
             </button>
           </div>
         </Fragment>
       ) : (
         <Fragment>
-          <p>You have not yet setup a profile, please add some info</p>
+          <p className="text-light">You have not yet setup a profile, please add some info</p>
           <Link to="/create-profile" className="btn btn-primary my-1">
             Create Profile
           </Link>
         </Fragment>
       )}
-    </Fragment>
+      </div>
+</section>
+
+     </Fragment>
   );
 };
 

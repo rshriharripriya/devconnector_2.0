@@ -25,8 +25,11 @@ const Education = ({ education, deleteEducation }) => {
 
   return (
     <Fragment>
-      <h2 className="my-2">Education Credentials</h2>
-      <table className="table">
+        <div className="fittowidth">
+
+
+      <h2 className="my-2 text-light fittowidth">Education Credentials</h2>
+      <table className="table text-light fittowidth">
         <thead>
           <tr>
             <th>School</th>
@@ -37,6 +40,7 @@ const Education = ({ education, deleteEducation }) => {
         </thead>
         <tbody>{educations}</tbody>
       </table>
+        </div>
     </Fragment>
   );
 };

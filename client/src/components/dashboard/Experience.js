@@ -25,8 +25,9 @@ const Experience = ({ experience, deleteExperience }) => {
 
   return (
     <Fragment>
-      <h2 className="my-2">Experience Credentials</h2>
-      <table className="table">
+        <div className="fittowidth">
+      <h2 className="my-2 text-light fittowidth">Experience Credentials</h2>
+      <table className="table text-light fittowidth">
         <thead>
           <tr>
             <th>Company</th>
@@ -37,6 +38,7 @@ const Experience = ({ experience, deleteExperience }) => {
         </thead>
         <tbody>{experiences}</tbody>
       </table>
+            </div>
     </Fragment>
   );
 };

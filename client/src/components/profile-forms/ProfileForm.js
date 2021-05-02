@@ -70,14 +70,15 @@ const ProfileForm = ({
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Edit Your Profile</h1>
-      <p className="lead">
+      <div className="text-light ">
+      <h1 className="large text-light">Edit Your Profile</h1>
+      <p className="lead text-lightt">
         <i className="fas fa-user" /> Add some changes to your profile
       </p>
-      <small>* = required field</small>
+      <small className="text-danger">*required field</small>
       <form className="form" onSubmit={onSubmit}>
-        <div className="form-group">
-          <select name="status" value={status} onChange={onChange}>
+        <div className="form-group text-light">
+          <select  className="text-light" name="status" value={status} onChange={onChange}>
             <option>* Select Professional Status</option>
             <option value="Developer">Developer</option>
             <option value="Junior Developer">Junior Developer</option>
@@ -140,7 +141,7 @@ const ProfileForm = ({
             Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
           </small>
         </div>
-        <div className="form-group">
+        <div className="form-group text-light">
           <input
             type="text"
             placeholder="Github Username"
@@ -153,14 +154,14 @@ const ProfileForm = ({
             username
           </small>
         </div>
-        <div className="form-group">
+        <div className="form-group text light">
           <textarea
             placeholder="A short bio of yourself"
             name="bio"
             value={bio}
             onChange={onChange}
           />
-          <small className="form-text">Tell us a little about yourself</small>
+          <small className="form-text ">Tell us a little about yourself</small>
         </div>
 
         <div className="my-2">
@@ -238,7 +239,9 @@ const ProfileForm = ({
           Go Back
         </Link>
       </form>
+        </div>
     </Fragment>
+
   );
 };
 
